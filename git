@@ -1,0 +1,11 @@
+git --version
+crete repository
+create file .txt
+
+git init
+git add .
+git status
+git remote add origin "give url of http"
+git commit -m "First commit" 
+git status
+git push -u origin master
