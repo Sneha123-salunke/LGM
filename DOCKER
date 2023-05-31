@@ -1,0 +1,24 @@
+install nodejs 
+
+
+docker --version
+in vs code install extension of microsoft docker
+folder name must be in lowercase
+inside folder create Dockerfile and ss.js file
+
+inside js file write=>
+console.log("Name:Sneha");
+console.log("Class:TE");
+
+
+inside Dockerfile write=>
+FROM node:alphine
+COPY . /foldername
+CMD node /foldername/ss.js
+
+
+terminal command=>
+cd foldername
+docker --version
+node ss.js
+docker build -t foldername .
