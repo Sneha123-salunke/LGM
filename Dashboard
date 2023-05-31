@@ -1,0 +1,198 @@
+#index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="C:\Users\omen\OneDrive\Desktop\bootsrap\bootstrap-5.0.2-dist\bootstrap-5.0.2-dist\css\bootstrap.min.css">
+    <script src="C:\Users\omen\OneDrive\Desktop\bootsrap\bootstrap-5.0.2-dist\bootstrap-5.0.2-dist\js\bootstrap.min.js"></script>
+</head>
+<body>
+  
+    <div class="Container">   //div-section or container store attribute   class-attribute.div class styled using class.
+        <nav>
+            <ul>                         //ui with li used to create an unordered list
+                <li>
+                    <a href="#">  // to link the page
+                        
+                        <span class="nav-item">Admin</span>   //span-inline tag used to mark part of text or document
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        
+                        <span class="nav-item">Setting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        
+                        <span class="nav-item">Report</span>
+                    </a>
+                </li>
+             </ul>
+        </nav>
+
+        <section class="attendance"> //section-define section such as header ,footer.
+            <div class="attendance-list">
+              <h1>Attendance List</h1>
+              <table class="table">
+                <thead>
+                  <tr>  //tr-row
+                    <th>ID</th>  //th-header cell
+                    <th>Name</th>
+                    <th>Depart</th>
+                    <th>Date</th>
+                    <th>Join Time</th>
+                    <th>Logout Time</th>
+                    <th>Details</th>
+                  </tr>
+                </thead> //thead-used to group the header content
+                <tbody>
+                  <tr>
+                    <td>01</td> //td-contains data
+                    <td>Prajwal Said</td>
+                    <td>Design</td>
+                    <td>03-24-22</td>
+                    <td>8:00AM</td>
+                    <td>3:00PM</td>
+                    <td><button>View</button></td>
+                  </tr>
+                  
+                    <td>02</td>
+                    <td>Sayali Shelar</td>
+                    <td>Coding</td>
+                    <td>03-24-22</td>
+                    <td>9:00AM</td>
+                    <td>4:00PM</td>
+                    <td><button>View</button></td>
+                  </tr>
+                  <tr>
+                    <td>03</td>
+                    <td>Shital Jadhav</td>
+                    <td>testing</td>
+                    <td>03-24-22</td>
+                    <td>8:00AM</td>
+                    <td>3:00PM</td>
+                    <td><button>View</button></td>
+                  </tr>
+                  <tr>
+                    <td>04</td>
+                    <td>Salunke Sneha</td>
+                    <td>Design</td>
+                    <td>03-24-22</td>
+                    <td>8:00AM</td>
+                    <td>3:00PM</td>
+                    <td><button>View</button></td>
+                  </tr>
+                </tbody>  //tbody-used to group the body content
+              </table>
+            </div>
+          </section>
+
+          <section class="main">
+            <div class="main-top">
+            </div>
+            <div class="users">
+              <div class="card">
+                <img src="C:\Users\omen\Downloads">
+                <h4>Prajwal said</h4>
+                <p>Developer</p>
+                <div class="per">
+                  <table>
+                    <tr>
+                      <td><span>85%</span></td>
+                      <td><span>87%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Month</td>
+                      <td>Year</td>
+                    </tr>
+                  </table>
+                </div>
+                <button>Profile</button>
+              </div>
+              </div>
+              <div class="users">
+              <div class="card">
+                <img src="C:\Users\omen\Downloads">
+                <h4>Sayali Shelar</h4>
+                <p>Progammer</p>
+                <div class="per">
+                  <table>
+                    <tr>
+                      <td><span>82%</span></td>
+                      <td><span>85%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Month</td>
+                      <td>Year</td>
+                    </tr>
+                  </table>
+                </div>
+                
+                <button>Profile</button>
+              </div>
+              </div>
+      
+              </section>
+      
+    
+</body>
+</html>
+
+
+
+#style.css
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    background: rgb(226, 226, 226);
+  }
+  .container{
+    display: flex;
+  }
+  
+  .users table{
+    margin:  auto;
+  }
+  
+  .users .card{
+    width: 25%;
+    margin: 10px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    
+  }
+  
+  .table th,
+  .table td{
+    padding: 12px 15px;
+  }
+ 
+  .attendance-list{
+
+   background: #ede8e8;
+    
+  }
+  table thead tr{
+    color: #fff;
+    background: #34AF6D;
+   
+  }
+
+
