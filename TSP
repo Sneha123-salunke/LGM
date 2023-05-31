@@ -1,0 +1,45 @@
+r=int(input("Enter the rows: "))
+dist_matrix=[]
+for i in range(r):
+    li=list(map(int,input().split()))
+    dist_matrix.append(li)
+for i in dist_matrix:
+    print(i)
+
+import sys
+def nearest_neighbour(dist_matrix,unvisited,curr_city):
+    nearest=sys.maxsize
+    neighbour=None
+    for city in unvisited:
+        if dist_matrix[curr_city][city]<nearest:
+            nearest=dist_matrix[curr_city][city]
+            neighbour=city
+    return nearest,neighbour
+
+def tsp(dist_matrix):
+    n=len(dist_matrix)
+    Tourlist=[]
+    Costlist=[]
+    
+    for j in range(n):
+        tour=[j]*(n+1)
+        unvisited=set(range(0,n))
+        curr_city=j
+        unvisited.remove(j)
+        
+        for i in range(1,n):
+            dist,next_city=nearest_neighbour(dist_matrix,unvisited,curr_city)
+            tour[i]=next_city
+            curr_city=next_city
+            unvisited.remove(curr_city)
+        #tour[0]=j
+        cost=sum(dist_matrix[tour[i]][tour[i+1]] for i in range(n-1))
+        cost+=dist_matrix[tour[0]][tour[n-1]]
+        Costlist.append(cost)
+        Tourlist.append(tour)
+        print(tour)
+        print(cost)
+    print(min(Costlist))
+    index=Costlist.index(min(Costlist))
+    print(Tourlist[index])
+tsp(dist_matrix)
