@@ -1,0 +1,54 @@
+install nodejs
+npm --version
+npm install -g @angular/cli@latest
+ng new part-c
+y
+css
+part-c=>src=>app=>app.component.html
+app.component.html=>remove all content
+and write
+<h1>{{title}}<h1/>
+<input type="text" #name paceholder="Enter ypur name" name="Name"><br>
+                                                 address" name="Address"<br>
+contact-text
+email-email
+password-password
+<button (click)="getvalue(name.value,address.value,contact.value)">register</button>
+
+
+
+
+app.component.ts=>write below code
+change title-Register form
+
+displayname='';
+displayaddress='';
+
+getvalue(name:string,address:string,contact:string,email:string){
+this.displayname=name;
+this.displayaddress=address;
+dont type for password
+
+}
+
+app.component.html=>and write
+<h1>Your registered Data</h1>
+<p>Name:{{displayname}}</p>
+ <p>Address:{{displayaddress}}</p>
+dont use for password
+
+ternimal=>cd partc
+ng serve
+y
+
+copy link and fill form
+
+css=>
+input{
+width:400px;
+height:25px;
+margin:10px;
+padding:5px;
+
+
+}
